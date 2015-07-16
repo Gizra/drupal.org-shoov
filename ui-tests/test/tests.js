@@ -62,7 +62,7 @@ describe('Drupal.org live site testing', function() {
             // Who uses Drupal text
             '#sites-with-drupal p a'
           ]
-      }, console.log)
+      }, shoovWebdrivercss.processResults)
       .call(done);
   });
 
@@ -76,7 +76,7 @@ describe('Drupal.org live site testing', function() {
             '.narrow-box ul.flat',
             '.get-started.documentation img'
           ],
-      }, console.log)
+      }, shoovWebdrivercss.processResults)
       .call(done);
   });
 });
