@@ -1,0 +1,8 @@
+before_script:
+  - cd ui-tests
+  # Instead of npm install, we save time by getting
+  # a gzipped file with the vendor and bin directories.
+  - tar zxf node_modules.tar.gz
+
+script:
+  - PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
