@@ -1,7 +1,7 @@
 before_script:
   - cd ui-tests
   # Instead of npm install, we save time by getting
-  # a gzipped file with the vendor and bin directories.
+  # by using a gzipped file.
   - tar zxf node_modules.tar.gz
 
 script:
