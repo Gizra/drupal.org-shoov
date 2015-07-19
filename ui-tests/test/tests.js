@@ -46,7 +46,7 @@ describe('Drupal.org live site testing', function() {
   it('should show the home page',function(done) {
     client
       .url(baseUrl)
-      .webdrivercss(testName, {
+      .webdrivercss(testName + '.homepage', {
         name: 'homepage',
         exclude:
           [
@@ -70,7 +70,7 @@ describe('Drupal.org live site testing', function() {
   it('should show start page',function(done) {
     client
       .url(baseUrl + '/start')
-      .webdrivercss(testName, {
+      .webdrivercss(testName + '.start', {
         name: 'start',
         exclude:
           [
