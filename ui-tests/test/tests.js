@@ -61,7 +61,8 @@ describe('Drupal.org live site testing', function() {
           [
             // Who uses Drupal text
             '#sites-with-drupal p a'
-          ]
+          ],
+        screenWidth: selectedCaps == 'chrome' ? [320, 640, 960, 1200] : undefined,
       }, shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -76,6 +77,7 @@ describe('Drupal.org live site testing', function() {
             '.narrow-box ul.flat',
             '.get-started.documentation img'
           ],
+        screenWidth: selectedCaps == 'chrome' ? [320, 640, 960, 1200] : undefined,
       }, shoovWebdrivercss.processResults)
       .call(done);
   });
