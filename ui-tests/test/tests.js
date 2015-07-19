@@ -46,7 +46,7 @@ describe('Drupal.org live site testing', function() {
   it('should show the home page',function(done) {
     client
       .url(baseUrl)
-      .webdrivercss(testName, {
+      .webdrivercss(testName + '.homepage', {
         name: 'homepage',
         exclude:
           [
@@ -61,7 +61,8 @@ describe('Drupal.org live site testing', function() {
           [
             // Who uses Drupal text
             '#sites-with-drupal p a'
-          ]
+          ],
+        screenWidth: selectedCaps == 'chrome' ? [320, 640, 960, 1200] : undefined,
       }, shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -69,13 +70,14 @@ describe('Drupal.org live site testing', function() {
   it('should show start page',function(done) {
     client
       .url(baseUrl + '/start')
-      .webdrivercss(testName, {
+      .webdrivercss(testName + '.start', {
         name: 'start',
         exclude:
           [
             '.narrow-box ul.flat',
             '.get-started.documentation img'
           ],
+        screenWidth: selectedCaps == 'chrome' ? [320, 640, 960, 1200] : undefined,
       }, shoovWebdrivercss.processResults)
       .call(done);
   });
