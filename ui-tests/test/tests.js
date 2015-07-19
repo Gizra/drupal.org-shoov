@@ -63,7 +63,7 @@ describe('Drupal.org live site testing', function() {
             '#sites-with-drupal p a'
           ],
         screenWidth: [320, 640, 960, 1200],
-      }, shoovWebdrivercss.processResults)
+      }, console.log)
       .call(done);
   });
 
@@ -78,7 +78,7 @@ describe('Drupal.org live site testing', function() {
             '.get-started.documentation img'
           ],
         screenWidth: [320, 640, 960, 1200],
-      }, shoovWebdrivercss.processResults)
+      }, console.log)
       .call(done);
   });
 });
