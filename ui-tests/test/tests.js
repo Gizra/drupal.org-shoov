@@ -47,7 +47,7 @@ describe('Drupal.org live site testing', function() {
     client
       .url(baseUrl)
       .webdrivercss(testName + '.homepage', {
-        name: 'homepage',
+        name: '1',
         exclude:
           [
             // News block.
@@ -71,7 +71,7 @@ describe('Drupal.org live site testing', function() {
     client
       .url(baseUrl + '/start')
       .webdrivercss(testName + '.start', {
-        name: 'start',
+        name: '1',
         exclude:
           [
             '.narrow-box ul.flat',
