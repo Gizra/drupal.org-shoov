@@ -4,5 +4,6 @@ before_script:
   - tar -zxf node_modules.tar.gz
 
 script:
-  - PROVIDER_PREFIX=browserstack SELECTED_CAPS=ie11 mocha
-  - PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
+  # Run tests in parallel.
+  - PROVIDER_PREFIX=browserstack SELECTED_CAPS=ie11 mocha &
+  - PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha &
