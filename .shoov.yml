@@ -5,3 +5,4 @@ before_script:
 
 script:
   - PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
+  - PROVIDER_PREFIX=browserstack SELECTED_CAPS=ie11 mocha
