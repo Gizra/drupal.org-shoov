@@ -1,0 +1,12 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      selenium2: ~
+
+imports:
+  - behat.local.yml

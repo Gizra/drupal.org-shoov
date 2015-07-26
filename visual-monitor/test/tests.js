@@ -20,7 +20,7 @@ var capsConfig = {
     'os_version' : '7',
     'resolution' : '1024x768'
   }
-}
+};
 
 var selectedCaps = process.env.SELECTED_CAPS || undefined;
 var caps = selectedCaps ? capsConfig[selectedCaps] : undefined;
@@ -55,7 +55,8 @@ describe('Drupal.org live site testing', function() {
             // Community stats.
             '#community-stats .highlight',
             // Who uses Drupal.
-            '#sites-with-drupal img'
+            '#sites-with-drupal img',
+            '.front-current-activity tr > td'
           ],
         remove:
           [

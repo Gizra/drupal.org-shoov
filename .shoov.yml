@@ -1,7 +1,6 @@
 before_script:
+  # Instead of npm install, we save time by using a gzipped file.
   - cd visual-monitor
-  # Instead of npm install, we save time by getting
-  # by using a gzipped file.
   - tar zxf node_modules.tar.gz
 
 script:
