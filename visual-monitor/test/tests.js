@@ -2,11 +2,14 @@
 
 var shoovWebdrivercss = require('shoov-webdrivercss');
 
+var projectName = 'drupal.org';
+
 // This can be executed by passing the environment argument like this:
 // PROVIDER_PREFIX=browserstack SELECTED_CAPS=ie11 mocha
 // PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
 var capsConfig = {
   'chrome': {
+    'project': projectName,
     'browser' : 'Chrome',
     'browser_version' : '42.0',
     'os' : 'OS X',
@@ -14,6 +17,7 @@ var capsConfig = {
     'resolution' : '1024x768'
   },
   'ie11': {
+    'project': projectName,
     'browser' : 'IE',
     'browser_version' : '11.0',
     'os' : 'Windows',
