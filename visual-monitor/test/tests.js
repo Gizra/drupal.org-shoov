@@ -67,6 +67,9 @@ describe('Drupal.org live site testing', function() {
           ],
         remove:
           [
+            // News teaser
+            '#tab-news',
+
             // Who uses Drupal text
             '#sites-with-drupal p a'
           ],
